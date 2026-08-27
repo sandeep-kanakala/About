@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandeep Kumar | Software Engineer</title>
+<meta name="description" content="Portfolio of Sandeep Kumar Kanakala — Software Engineer specializing in Java, Spring Boot, NestJS, React, Next.js and .NET.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --bg:#07090d; --panel:#0d1118; --text:#f5f7fb; --muted:#9ca6b5;
+  --line:rgba(255,255,255,.09); --accent:#7c5cff; --accent2:#00d4ff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;
+  background:
+   radial-gradient(circle at 15% 10%,rgba(124,92,255,.18),transparent 28%),
+   radial-gradient(circle at 85% 25%,rgba(0,212,255,.10),transparent 25%);
+}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.22;
+background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+background-size:48px 48px}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1080px,90%);
+display:flex;justify-content:space-between;align-items:center;padding:12px 16px;
+background:rgba(13,17,24,.72);border:1px solid var(--line);border-radius:18px;backdrop-filter:blur(18px);z-index:10}
+.logo{font-family:"Space Grotesk";font-weight:700;font-size:19px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;color:#b9c0cc;font-size:13px}.navlinks a:hover{color:white}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;
+border:1px solid var(--line);background:#111722;color:white;font-weight:600;font-size:13px;transition:.25s}
+.btn:hover{transform:translateY(-2px);border-color:rgba(124,92,255,.6);box-shadow:0 10px 35px rgba(124,92,255,.15)}
+.primary{background:linear-gradient(135deg,var(--accent),#5a42dc);border:0}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:80px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:9px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;color:#c5ccd8;background:rgba(255,255,255,.025);font-size:12px;margin-bottom:22px}
+.dot{width:7px;height:7px;background:#49e38a;border-radius:50%;box-shadow:0 0 15px #49e38a}
+h1{font-family:"Space Grotesk";font-size:clamp(48px,7vw,86px);line-height:.98;letter-spacing:-4px;max-width:780px}
+.gradient{background:linear-gradient(90deg,#fff,var(--accent2),#9d83ff);-webkit-background-clip:text;color:transparent}
+.hero p{font-size:18px;color:var(--muted);max-width:650px;margin:25px 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.code-card{background:linear-gradient(145deg,rgba(124,92,255,.12),rgba(0,212,255,.04));border:1px solid var(--line);
+border-radius:24px;padding:24px;box-shadow:0 30px 90px rgba(0,0,0,.35);transform:rotate(2deg)}
+.code-top{display:flex;gap:7px;margin-bottom:22px}.circle{width:10px;height:10px;border-radius:50%;background:#3a4250}
+pre{font:13px/1.9 Consolas,monospace;color:#c8d0dc;white-space:pre-wrap}.key{color:#9d83ff}.str{color:#7de3ff}.num{color:#79e5a3}
+section{padding:105px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}
+.eyebrow{color:#8f7cff;font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:700}
+h2{font:700 clamp(30px,4vw,48px)/1.1 "Space Grotesk";letter-spacing:-1.5px;margin-top:8px}
+.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:rgba(13,17,24,.78);border:1px solid var(--line);border-radius:22px;padding:27px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(124,92,255,.45);box-shadow:0 25px 60px rgba(0,0,0,.28)}
+.card h3{font-size:20px;margin-bottom:8px}.card p{color:var(--muted);font-size:14px}
+.tag{display:inline-block;padding:6px 9px;border-radius:8px;background:#171d28;color:#bfc7d4;font-size:11px;margin:15px 5px 0 0}
+.timeline{position:relative;margin-left:8px;padding-left:32px;border-left:1px solid var(--line)}
+.job{position:relative;padding-bottom:38px}.job:before{content:"";position:absolute;left:-38px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 20px var(--accent)}
+.job .date{font-size:12px;color:#8f7cff;font-weight:700;margin-bottom:6px}.job h3{font-size:20px}.job ul{margin:12px 0 0 18px;color:var(--muted);font-size:14px}.job li{margin:5px 0}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:12px 15px;border:1px solid var(--line);border-radius:12px;background:#0d121a;color:#d8dee8;font-size:13px;transition:.2s}.skill:hover{background:#151c28;transform:translateY(-2px)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:22px}.stat{padding:24px;border:1px solid var(--line);border-radius:18px;background:#0c1017}.stat strong{font:700 34px "Space Grotesk";display:block}.stat span{color:var(--muted);font-size:12px}
+.project-card{min-height:260px;display:flex;flex-direction:column;justify-content:space-between}
+.project-number{font:700 13px;color:#6d7582}.project-card h3{font:700 27px "Space Grotesk"}
+.contact{border:1px solid var(--line);background:linear-gradient(135deg,rgba(124,92,255,.14),rgba(0,212,255,.06));border-radius:28px;padding:50px;text-align:center}
+.contact p{max-width:600px;margin:15px auto 25px;color:var(--muted)}
+footer{padding:35px 0;border-top:1px solid var(--line);color:#6f7887;font-size:12px;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){
+ nav{top:10px}.navlinks{display:none}.hero-grid{grid-template-columns:1fr}.code-card{display:none}
+ .cards{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}section{padding:75px 0}h1{letter-spacing:-2.5px}
+ .contact{padding:35px 20px}
+}
+@media(max-width:480px){.stats{grid-template-columns:1fr}.hero p{font-size:16px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#">S<span>.</span>K</a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+  </div>
+  <a class="btn primary" href="mailto:kanakala1503@gmail.com">Let's talk</a>
+</nav>
+
+<header class="hero container">
+ <div class="hero-grid">
+  <div class="reveal">
+   <div class="badge"><span class="dot"></span> Software Engineer · Open to opportunities</div>
+   <h1>Building <span class="gradient">systems</span> that actually work.</h1>
+   <p>I'm Sandeep Kumar Kanakala — a software engineer focused on backend systems, REST APIs and modern full-stack applications.</p>
+   <div class="actions">
+    <a class="btn primary" href="#projects">View my work ↗</a>
+    <a class="btn" href="https://github.com/sandeep-kanakala" target="_blank">GitHub</a>
+    <a class="btn" href="https://linkedin.com/in/sandeep-kanakala" target="_blank">LinkedIn</a>
+   </div>
+  </div>
+  <div class="code-card reveal">
+   <div class="code-top"><i class="circle"></i><i class="circle"></i><i class="circle"></i></div>
+<pre><span class="key">const</span> engineer = {
+  name: <span class="str">"Sandeep Kumar"</span>,
+  role: <span class="str">"Software Engineer"</span>,
+  experience: <span class="num">"2025 → now"</span>,
+  focus: [
+    <span class="str">"Backend"</span>,
+    <span class="str">"APIs"</span>,
+    <span class="str">"Full Stack"</span>
+  ],
+  coffee: <span class="num">true</span>
+};</pre>
+  </div>
+ </div>
+</header>
+
+<main>
+<section id="about">
+ <div class="container reveal">
+  <div class="section-head"><div><div class="eyebrow">01 — About</div><h2>Engineering with purpose.</h2></div></div>
+  <div class="cards">
+   <div class="card"><h3>What I do</h3><p>I develop enterprise applications and backend services across CRM and Insurance domains, working with Java/Spring Boot, NestJS, .NET, React/Next.js and relational databases.</p></div>
+   <div class="card"><h3>How I work</h3><p>I care about clean architecture, maintainable APIs, efficient database queries and production-ready features. I enjoy working across frontend, backend and QA teams.</p></div>
+  </div>
+  <div class="stats">
+   <div class="stat"><strong>20+</strong><span>REST APIs built during internship</span></div>
+   <div class="stat"><strong>30%</strong><span>API latency reduction in project</span></div>
+   <div class="stat"><strong>8.6</strong><span>B.Tech CGPA</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="experience">
+ <div class="container reveal">
+  <div class="section-head"><div><div class="eyebrow">02 — Experience</div><h2>Where I've worked.</h2></div></div>
+  <div class="timeline">
+   <article class="job">
+    <div class="date">SEPTEMBER 2025 — PRESENT</div>
+    <h3>Software Engineer · Linkfields Innovations</h3>
+    <ul>
+     <li>Developing and enhancing a CRM platform for MultiChoice using NestJS, React.js and PostgreSQL.</li>
+     <li>Building RESTful APIs, authentication modules and database integrations.</li>
+     <li>Contributing to an RMA Policy Administration System using Next.js, .NET, C#, Python, Node.js and MSSQL.</li>
+     <li>Collaborating with frontend and QA teams to ship production-ready features.</li>
+    </ul>
+   </article>
+   <article class="job">
+    <div class="date">MARCH 2025 — SEPTEMBER 2025</div>
+    <h3>SDE Intern · Soarswell Consulting</h3>
+    <ul>
+     <li>Developed backend services and 20+ RESTful APIs using Java and Spring Boot.</li>
+     <li>Improved maintainability and reduced latency through modularization and optimization.</li>
+     <li>Contributed to production deployment and post-release enhancements in an Agile environment.</li>
+    </ul>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="container reveal">
+  <div class="section-head"><div><div class="eyebrow">03 — Projects</div><h2>Things I've built.</h2></div></div>
+  <div class="cards">
+   <article class="card project-card">
+    <div><span class="project-number">01 / BACKEND</span><h3>Application Tracker</h3><p>Spring Boot microservices for task tracking and user management, using layered architecture and optimized database queries.</p></div>
+    <div><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Hibernate</span><span class="tag">JPA</span><span class="tag">React.js</span></div>
+   </article>
+   <article class="card project-card">
+    <div><span class="project-number">02 / AI + IOT</span><h3>Krishi Mithra</h3><p>Smart farming application for irrigation automation, disease detection, crop prediction and real-time market prices.</p></div>
+    <div><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Python</span><span class="tag">Firebase</span><span class="tag">Arduino</span></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="container reveal">
+  <div class="section-head"><div><div class="eyebrow">04 — Toolbox</div><h2>My stack.</h2></div></div>
+  <div class="skills">
+   <span class="skill">Java</span><span class="skill">Spring Boot</span><span class="skill">C++</span><span class="skill">Python</span><span class="skill">JavaScript</span><span class="skill">TypeScript</span><span class="skill">C#</span>
+   <span class="skill">NestJS</span><span class="skill">React.js</span><span class="skill">Next.js</span><span class="skill">.NET</span><span class="skill">Hibernate</span><span class="skill">JPA</span>
+   <span class="skill">PostgreSQL</span><span class="skill">MSSQL</span><span class="skill">MySQL</span><span class="skill">Git</span><span class="skill">AWS Lambda</span><span class="skill">Azure DevOps</span>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container reveal">
+  <div class="contact">
+   <div class="eyebrow">05 — Contact</div>
+   <h2>Let's build something.</h2>
+   <p>Have a project, opportunity or just want to talk tech? Drop me a message.</p>
+   <div class="actions" style="justify-content:center">
+    <a class="btn primary" href="mailto:kanakala1503@gmail.com">kanakala1503@gmail.com ↗</a>
+    <a class="btn" href="tel:+919346229667">+91 9346229667</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="container">
+ <span>© <span id="year"></span> Sandeep Kumar Kanakala</span>
+ <span>Built with HTML · CSS · JavaScript</span>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("show"); });
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
